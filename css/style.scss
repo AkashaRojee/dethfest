@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700;800;900&display=swap');
+
+$heading-font: 'Work Sans', sans-serif;
+$body-font: 'Lato', sans-serif;
+$nav-height: 21px;
+$m-t-10: 10px;
+$m-b-10: 10px;
+
+/*
+  ========================================
+  General styling
+  ========================================
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $body-font;
+  font-weight: 400;
+  color: white;
+}
+
+h1 {
+  font-family: $heading-font;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+.desktop {
+  display: none;
+}
+
+.heading {
+  font-family: $heading-font;
+  font-size: 25px;
+}
+
+.orange {
+  color: #ec5242
+}
+
+/*
+  ========================================
+  Reusable Flexbox classes
+  ========================================
+*/
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/*
+  ========================================
+  General spacing classes
+  ========================================
+*/
+
+.body-30 {
+  font-size: 30px;
+}
+
+.body-18 {
+  font-size: 18px;
+}
+
+.m-b-10 {
+  margin-bottom: $m-b-10;
+}
+
+.p-x-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+/*
+  ========================================
+  Headline
+  ========================================
+*/
+
+#headline {
+  height: calc(100vh - 21px);
+  background: url(../images/background.jpg) center;
+  background-color: white;
+  background-blend-mode: luminosity;
+  
+  > * + * {
+    margin-top: 10px;
+  }
+
+  .background-text {
+    background: url(../images/text-background.jpg);
+    background-position: right 39% bottom 25%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(200%);
+  }
+
+  .tagline {
+    border: 2px solid white;
+    background-color: black;
+  }
+}

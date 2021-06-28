@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700;800;900&display=swap");
+/*
+  ========================================
+  General styling
+  ========================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+.desktop {
+  display: none;
+}
+
+.heading {
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+}
+
+.orange {
+  color: #ec5242;
+}
+
+/*
+  ========================================
+  Reusable Flexbox classes
+  ========================================
+*/
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*
+  ========================================
+  General spacing classes
+  ========================================
+*/
+.body-30 {
+  font-size: 30px;
+}
+
+.body-18 {
+  font-size: 18px;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.p-x-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+/*
+  ========================================
+  Headline
+  ========================================
+*/
+#headline {
+  height: calc(100vh - 21px);
+  background: url(../images/background.jpg) center;
+  background-color: white;
+  background-blend-mode: luminosity;
+}
+
+#headline > * + * {
+  margin-top: 10px;
+}
+
+#headline .background-text {
+  background: url(../images/text-background.jpg);
+  background-position: right 39% bottom 25%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: brightness(200%);
+          filter: brightness(200%);
+}
+
+#headline .tagline {
+  border: 2px solid white;
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */
