@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /*
   ========================================
   General styling
@@ -24,17 +24,34 @@ h1 {
   font-weight: 900;
 }
 
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
 .desktop {
   display: none;
 }
 
 .heading {
   font-family: "Work Sans", sans-serif;
+  font-weight: 800;
   font-size: 25px;
 }
 
-.orange {
+.font-orange {
   color: #ec5242;
+}
+
+.vertical-center {
+  text-align: center;
+}
+
+.fill-fit {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*
@@ -42,6 +59,16 @@ h1 {
   Reusable Flexbox classes
   ========================================
 */
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .flex-col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +85,17 @@ h1 {
           justify-content: center;
 }
 
+.justify-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /*
   ========================================
   General spacing classes
@@ -67,12 +105,32 @@ h1 {
   font-size: 30px;
 }
 
-.body-18 {
+.font-18 {
   font-size: 18px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-small {
+  font-size: 14px;
 }
 
 .m-b-10 {
   margin-bottom: 10px;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.m-l-15 {
+  margin-left: 15px;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
 }
 
 .p-x-15 {
@@ -84,6 +142,23 @@ h1 {
   padding: 20px;
 }
 
+.p-y-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
 /*
   ========================================
   Headline
@@ -91,7 +166,8 @@ h1 {
 */
 #headline {
   height: calc(100vh - 21px);
-  background: url(../images/background.jpg) center;
+  background: url(../images/background-headline.jpg);
+  background-position: center;
   background-color: white;
   background-blend-mode: luminosity;
 }
@@ -101,9 +177,10 @@ h1 {
 }
 
 #headline .background-text {
-  background: url(../images/text-background.jpg);
+  background: url(../images/background-text.jpg);
   background-position: right 39% bottom 25%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-filter: brightness(200%);
           filter: brightness(200%);
@@ -112,5 +189,39 @@ h1 {
 #headline .tagline {
   border: 2px solid white;
   background-color: black;
+}
+
+/*
+  ========================================
+  Divider
+  ========================================
+*/
+.divider {
+  background: url(../images/divider.jpg);
+  height: 29px;
+}
+
+/*
+  ========================================
+  Program
+  ========================================
+*/
+#program {
+  background: url(../images/background-program.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#program .program-heading::after {
+  content: '';
+  height: 1px;
+  width: 15%;
+  border-bottom: 1px solid #ec5242;
+  display: block;
+  padding-top: 15px;
+}
+
+#program .program-card {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 /*# sourceMappingURL=style.css.map */
