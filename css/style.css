@@ -113,6 +113,14 @@ h2 {
   font-weight: 700;
 }
 
+.semi-bold {
+  font-weight: 600;
+}
+
+.medium {
+  font-weight: 500;
+}
+
 .font-small {
   font-size: 14px;
 }
@@ -131,6 +139,10 @@ h2 {
 
 .m-b-30 {
   margin-bottom: 30px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
 }
 
 .p-x-15 {
@@ -223,5 +235,11 @@ h2 {
 
 #program .program-card {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+#program .program-button {
+  background-color: #ec5242;
+  border: none;
+  color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
