@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html lang="en">
+    
+  {%- include head.html -%}
+
+    <body>
+
+      {%- include header.html -%}
+
+      <main>
+        
+        {% if page.branch == "home" %}
+          {%- include home.html -%}
+        {% else if page.branch == "about" %}
+          {%- include about.html -%}
+        {% endif %}
+
+      </main>
+
+      {%- include footer.html -%}
+      
+    </body>
+  </html>
+</html>
+
