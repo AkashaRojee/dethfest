@@ -44,6 +44,10 @@ h2 {
   color: #ec5242;
 }
 
+.font-black {
+  color: black;
+}
+
 .background-black {
   background-color: black;
 }
@@ -87,6 +91,12 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.justify-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .justify-around {
@@ -141,6 +151,10 @@ h2 {
   margin-bottom: 10px;
 }
 
+.m-10 {
+  margin: 10px;
+}
+
 .m-b-15 {
   margin-bottom: 15px;
 }
@@ -170,6 +184,10 @@ h2 {
   padding: 20px;
 }
 
+.p-30 {
+  padding: 30px;
+}
+
 .p-y-30 {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -185,6 +203,10 @@ h2 {
 
 .w-45 {
   width: 45%;
+}
+
+.w-50 {
+  width: 50%;
 }
 
 /*
@@ -234,12 +256,6 @@ h2 {
   Program
   ========================================
 */
-#program {
-  background: url(../images/background-program.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
 #program .program-card {
   background-color: rgba(255, 255, 255, 0.25);
 }
@@ -248,6 +264,17 @@ h2 {
   background-color: #ec5242;
   border: none;
   color: inherit;
+}
+
+/*
+========================================
+Grey pattern for Program and Partners
+========================================
+*/
+.background-pattern {
+  background: url(../images/backgrounds/grey-pattern.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 /*
@@ -277,5 +304,25 @@ Featured Bands
 #bands .band .band-country:after {
   border-bottom-color: #d3d3d3;
   width: 7.5%;
+}
+
+.partner-row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.partner-row div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.partner-row div img {
+  height: 5vw;
+  min-height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 /*# sourceMappingURL=style.css.map */
