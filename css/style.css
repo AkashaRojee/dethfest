@@ -52,7 +52,7 @@ h2 {
   background-color: black;
 }
 
-.vertical-center {
+.center-text {
   text-align: center;
 }
 
@@ -112,27 +112,23 @@ h2 {
 
 /*
   ========================================
-  General spacing classes
+  Font styling classes
   ========================================
 */
-.body-30 {
-  font-size: 30px;
+.heading-35 {
+  font-size: 35px;
 }
 
-.font-18 {
+.font-bigger {
+  font-size: 20px;
+}
+
+.font-big {
   font-size: 18px;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
-.semi-bold {
-  font-weight: 600;
-}
-
-.medium {
-  font-weight: 500;
+.font-normal {
+  font-size: 16px;
 }
 
 .font-small {
@@ -143,8 +139,47 @@ h2 {
   font-size: 12px;
 }
 
+.weight-bold {
+  font-weight: 700;
+}
+
+.weight-semi-bold {
+  font-weight: 600;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.weight-regular {
+  font-weight: 400;
+}
+
+.body-30 {
+  font-size: 30px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
 .italic {
   font-style: italic;
+}
+
+/*
+  ========================================
+  Spacing classes
+  ========================================
+*/
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.position-relative {
+  position: relative;
 }
 
 .m-b-10 {
@@ -161,6 +196,11 @@ h2 {
 
 .m-l-15 {
   margin-left: 15px;
+}
+
+.m-x-20 {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .m-b-30 {
@@ -184,8 +224,23 @@ h2 {
   padding: 20px;
 }
 
+.p-x-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.p-x-25-res {
+  padding-top: 25%;
+  padding-bottom: 25%;
+}
+
 .p-30 {
   padding: 30px;
+}
+
+.p-x-30 {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .p-y-30 {
@@ -207,6 +262,19 @@ h2 {
 
 .w-50 {
   width: 50%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-h-100 {
+  width: 100%;
+  height: 100%;
+}
+
+.min-h-200 {
+  min-height: 200px;
 }
 
 /*
@@ -324,5 +392,25 @@ Featured Bands
      object-fit: contain;
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
+}
+
+/*
+========================================
+CSS specific to About page
+========================================
+*/
+.border-default {
+  border: 2px solid #d3d3d3;
+}
+
+.event:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ec5242;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=style.css.map */
