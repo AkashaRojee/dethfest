@@ -8,6 +8,7 @@ $body-font: 'Lato', sans-serif;
 $nav-height: 21px;
 $m-t-10: 10px;
 $m-b-10: 10px;
+$grey: #d3d3d3;
 $orange: #ec5242;
 
 /*
@@ -52,6 +53,10 @@ h2 {
 
 .font-orange {
   color: #ec5242;
+}
+
+.background-black {
+  background-color: black;
 }
 
 .vertical-center {
@@ -121,6 +126,14 @@ h2 {
   font-size: 14px;
 }
 
+.font-smallest {
+  font-size: 12px;
+}
+
+.italic {
+  font-style: italic;
+}
+
 .m-b-10 {
   margin-bottom: 10px;
 }
@@ -135,6 +148,10 @@ h2 {
 
 .m-b-30 {
   margin-bottom: 30px;
+}
+
+.m-b-60 {
+  margin-bottom: 60px;
 }
 
 .m-t-30 {
@@ -225,16 +242,6 @@ h2 {
   background-size: cover;
   background-position: center;
 
-  //short orange border underneath "Program"
-  .program-heading::after {
-    content: '';
-    height: 1px;
-    width: 15%;
-    border-bottom: 1px solid $orange;
-    display: block;
-    padding-top: 15px;
-  }
-
   .program-card {
     background-color: rgba(255, 255, 255, 0.25);
   }
@@ -243,5 +250,49 @@ h2 {
     background-color: $orange;
     border: none;
     color: inherit;
+  }
+}
+
+/*
+========================================
+Custom width bottom border for Program and Featured Bands
+========================================
+*/
+
+//Common CSS
+.border-bottom {
+  &:after {
+    content: '';
+    height: 1px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    display: block;
+    padding-top: 15px;
+  }
+}
+
+//Custom CSS for bottom border of cards heading in Program and Featured Bands
+.cards-heading {
+  &:after {
+    border-bottom-color: $orange;
+    width: 15%;
+  }
+}
+
+/*
+========================================
+Featured Bands
+========================================
+*/
+
+#bands {
+  .band {
+    //Custom CSS for bottom border of country name
+    .band-country {
+      &:after {
+        border-bottom-color: $grey;
+        width: 7.5%;
+      }
+    }
   }
 }
