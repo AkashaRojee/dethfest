@@ -59,6 +59,10 @@ h2 {
   color: black;
 }
 
+.color-grey {
+  color: $grey;
+}
+
 .background-black {
   background-color: black;
 }
@@ -70,6 +74,11 @@ h2 {
 .fill-fit {
   height: 100%;
   object-fit: cover;
+}
+
+.minimal {
+  border: none;
+  background: none;
 }
 
 /*
@@ -102,6 +111,32 @@ h2 {
 
 .align-center {
   align-items: center;
+}
+
+/*
+  ========================================
+  Positioning classes
+  ========================================
+*/
+
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sticky {
+  z-index: 100;
 }
 
 /*
@@ -168,16 +203,6 @@ h2 {
   ========================================
 */
 
-.position-absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.position-relative {
-  position: relative;
-}
-
 .m-b-10 {
   margin-bottom: 10px;
 }
@@ -186,12 +211,16 @@ h2 {
   margin: 10px;
 }
 
-.m-b-15 {
-  margin-bottom: 15px;
+.m-t-15 {
+  margin-top: 15px;
 }
 
 .m-l-15 {
   margin-left: 15px;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
 }
 
 .m-x-20 {
@@ -248,6 +277,10 @@ h2 {
   padding-bottom: 30px;
 }
 
+.p-t-55 {
+  padding-top: 55px;
+}
+
 .w-25 {
   width: 25%;
 }
@@ -284,7 +317,7 @@ h2 {
 */
 
 #headline {
-  height: calc(100vh - 21px);
+  height: 100vh;
   background: url(../images/backgrounds/headline.jpg);
   background-position: center;
   background-color: white;
