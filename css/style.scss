@@ -13,6 +13,9 @@ $body-font: 'Lato', sans-serif;
 $orange: #ec5242;
 $grey: #d3d3d3;
 $p-y-menu: 15px;
+$m-l-menu: 1vw;
+$p-r-headline: 0vw;
+$size-subheading: 30px;
 
 //Horizontal menu padding
 @mixin p-y-menu($p-y-menu) {
@@ -23,6 +26,13 @@ $p-y-menu: 15px;
 }
 @include p-y-menu($p-y-menu: 15px);
 
+//Margin to the left of each menu item
+@mixin m-l-menu($m-l-menu) {
+  .m-l-menu {
+    margin-left: $m-l-menu;
+  }
+}
+
 //Default horizontal padding used throughout page
 @mixin default-padding-x($default-padding-x) {
   .p-x-default {
@@ -31,6 +41,22 @@ $p-y-menu: 15px;
   }
 }
 @include default-padding-x($default-padding-x: 15px);
+
+//Font size for text above h1
+@mixin size-subheading($size-subheading) {
+  .size-subheading {
+    font-size: $size-subheading;
+  }
+}
+@include size-subheading($size-subheading: 30px);
+
+//Padding to the right of headline
+//(overrides padding-right in p-x-default)
+@mixin p-r-headline($p-r-headline) {
+  .p-r-headline {
+    padding-right: $p-r-headline;
+  }
+}
 
 /*
   ========================================
@@ -86,6 +112,10 @@ h2 {
 
 .background-black {
   background-color: black;
+}
+
+.border-default {
+  border: 2px solid $grey;
 }
 
 .center-text {
@@ -224,12 +254,6 @@ h2 {
   Spacing classes
   ========================================
 */
-
-
-
-.m-l-2vw {
-  margin-left: 2vw;
-}
 
 .m-b-10 {
   margin-bottom: 10px;
@@ -384,11 +408,6 @@ h2 {
     -webkit-text-fill-color: transparent;
     filter: brightness(200%);
   }
-
-  .tagline {
-    border: 2px solid white;
-    background-color: black;
-  }
 }
 
 /*
@@ -495,10 +514,6 @@ CSS specific to About page
 ========================================
 */
 
-.border-default {
-  border: 2px solid $grey;
-}
-
 .border-orange {
   border: 2px solid $orange;
 }
@@ -525,6 +540,12 @@ CSS specific to About page
   //Default horizontal padding
   @include default-padding-x($default-padding-x: 10vw);
 
+  @include m-l-menu($m-l-menu: 1vw);
+
+  @include size-subheading($size-subheading: 40px);
+
+  @include p-r-headline($p-r-headline: 40vw);
+
   .desktop {
     display: unset;
   }
@@ -543,4 +564,19 @@ CSS specific to About page
     height: calc(#{$menu-height} - (#{$p-y-menu} * 2));
   }
 
+  h1 {
+    font-size: 60px;
+  }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 890px) {
+  @include p-r-headline($p-r-headline: 30vw);
+}
+
+@media (min-width: 850px) {
+
+  //Increase margin between menu links even more when going up desktop sizes
+  @include m-l-menu($m-l-menu: 2vw);
 }

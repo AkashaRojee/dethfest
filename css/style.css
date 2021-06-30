@@ -15,6 +15,10 @@
   padding-right: 15px;
 }
 
+.size-subheading {
+  font-size: 30px;
+}
+
 /*
   ========================================
   General styling
@@ -69,6 +73,10 @@ h2 {
 
 .background-black {
   background-color: black;
+}
+
+.border-default {
+  border: 2px solid #d3d3d3;
 }
 
 .center-text {
@@ -222,10 +230,6 @@ h2 {
   Spacing classes
   ========================================
 */
-.m-l-2vw {
-  margin-left: 2vw;
-}
-
 .m-b-10 {
   margin-bottom: 10px;
 }
@@ -377,11 +381,6 @@ h2 {
           filter: brightness(200%);
 }
 
-#headline .tagline {
-  border: 2px solid white;
-  background-color: black;
-}
-
 /*
   ========================================
   Divider
@@ -472,10 +471,6 @@ Featured Bands
 CSS specific to About page
 ========================================
 */
-.border-default {
-  border: 2px solid #d3d3d3;
-}
-
 .border-orange {
   border: 2px solid #ec5242;
 }
@@ -496,6 +491,15 @@ CSS specific to About page
     padding-left: 10vw;
     padding-right: 10vw;
   }
+  .m-l-menu {
+    margin-left: 1vw;
+  }
+  .size-subheading {
+    font-size: 40px;
+  }
+  .p-r-headline {
+    padding-right: 40vw;
+  }
   .desktop {
     display: unset;
   }
@@ -509,6 +513,21 @@ CSS specific to About page
   */
   .menu-logo {
     height: calc(60px - (15px * 2));
+  }
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 890px) {
+  .p-r-headline {
+    padding-right: 30vw;
+  }
+}
+
+@media (min-width: 850px) {
+  .m-l-menu {
+    margin-left: 2vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
