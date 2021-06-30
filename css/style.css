@@ -84,6 +84,7 @@ h2 {
 .minimal {
   border: none;
   background: none;
+  text-decoration: none;
 }
 
 /*
@@ -500,9 +501,6 @@ CSS specific to About page
   }
   .mobile {
     display: none;
-  }
-  .link-unstyle {
-    text-decoration: none;
   }
   /*
   ========================================
