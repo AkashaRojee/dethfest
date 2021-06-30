@@ -1,5 +1,20 @@
+/*
+  ========================================
+  Imports, variables and mixins
+  ========================================
+*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.p-y-menu {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.p-x-default {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /*
   ========================================
   General styling
@@ -206,6 +221,10 @@ h2 {
   Spacing classes
   ========================================
 */
+.m-l-2vw {
+  margin-left: 2vw;
+}
+
 .m-b-10 {
   margin-bottom: 10px;
 }
@@ -243,9 +262,26 @@ h2 {
   margin-top: 30px;
 }
 
+.p-x-10 {
+  padding: 10px;
+}
+
+.p-l-15 {
+  padding-left: 15px;
+}
+
+.p-t-15 {
+  padding-top: 15px;
+}
+
 .p-x-15 {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.p-y-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .p-20 {
@@ -298,6 +334,10 @@ h2 {
 
 .w-100 {
   width: 100%;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 .w-h-100 {
@@ -435,6 +475,10 @@ CSS specific to About page
   border: 2px solid #d3d3d3;
 }
 
+.border-orange {
+  border: 2px solid #ec5242;
+}
+
 .event:before {
   content: '';
   width: 100%;
@@ -444,5 +488,29 @@ CSS specific to About page
   left: 0;
   background-color: #ec5242;
   opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .p-x-default {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .desktop {
+    display: unset;
+  }
+  .mobile {
+    display: none;
+  }
+  .link-unstyle {
+    text-decoration: none;
+  }
+  /*
+  ========================================
+  Desktop header
+  ========================================
+  */
+  .menu-logo {
+    height: calc(60px - (15px * 2));
+  }
 }
 /*# sourceMappingURL=style.css.map */
