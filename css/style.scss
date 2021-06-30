@@ -292,6 +292,11 @@ h2 {
   margin-top: 30px;
 }
 
+.m-y-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 // .m-t-10 {
 //   margin-top: 10px;
 // }
@@ -429,7 +434,8 @@ h2 {
 
 #program {
   .program-card {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(211, 211, 211, 0.25);
+
   }
 
   .program-button {
@@ -537,7 +543,6 @@ CSS specific to About page
   // to automatically style height of menu-logo
   $menu-height: 60px;
 
-  //Default horizontal padding
   @include default-padding-x($default-padding-x: 10vw);
 
   @include m-l-menu($m-l-menu: 1vw);
@@ -568,8 +573,37 @@ CSS specific to About page
     font-size: 60px;
   }
 
-}
+  /*
+  ========================================
+  Main Program
+  ========================================
+  */
+  .program-cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .program-card {
+    width: 24%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:unset;
+    margin-bottom: 0px;
+    > * {
+      text-align:center;
+      flex-direction: row;
+      width: 100%;
+      margin-left: 0px;
+      img {
+        width: 100%;
+        // min-height: 100px;
+      }
+      & + * {
+        margin-top: 15px;
+      }
+    }
+  }
 
+}
 
 @media (min-width: 768px) and (max-width: 890px) {
   @include p-r-headline($p-r-headline: 30vw);

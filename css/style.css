@@ -267,6 +267,11 @@ h2 {
   margin-top: 30px;
 }
 
+.m-y-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .p-x-10 {
   padding: 10px;
 }
@@ -397,7 +402,7 @@ h2 {
   ========================================
 */
 #program .program-card {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(211, 211, 211, 0.25);
 }
 
 #program .program-button {
@@ -516,6 +521,48 @@ CSS specific to About page
   }
   h1 {
     font-size: 60px;
+  }
+  /*
+  ========================================
+  Main Program
+  ========================================
+  */
+  .program-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .program-card {
+    width: 24%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    margin-bottom: 0px;
+  }
+  .program-card > * {
+    text-align: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .program-card > * img {
+    width: 100%;
+  }
+  .program-card > * + * {
+    margin-top: 15px;
   }
 }
 
