@@ -11,6 +11,7 @@
 
 $orange: #ec5242;
 $grey: #d3d3d3;
+$p-x-default: 15px;
 $p-y-menu: 15px;
 $m-l-menu: 1vw;
 $p-r-headline: 0vw;
@@ -121,6 +122,36 @@ h2 {
 .border-orange {
   border: 2px solid $orange;
 }
+
+/*
+  ========================================
+  Mobile menu
+  ========================================
+*/
+
+.show-menu {
+  display: unset;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: $p-x-default;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+
+  button {
+    float: right;
+    margin-bottom: $p-x-default;
+  }
+
+  a {
+    display: block;
+    clear: right;
+    margin-top: $p-x-default;
+  }
+}
+
 
 /*
   ========================================
