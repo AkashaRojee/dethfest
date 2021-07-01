@@ -16,4 +16,5 @@ function switchMenuButton() {
   }
 }
 
+// Clicking on menu button/links toggles mobile menu
 addEventListeners([openButton, ...menuLinks], 'click', switchMenuButton);
