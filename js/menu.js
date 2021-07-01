@@ -1,9 +1,15 @@
-const menuButton = document.querySelector('.menu-button');
+const openButton = document.querySelector('.menu-button');
 const menu = document.querySelector('.menu-links');
+const closeButton = menu.querySelector('button');
+let activeMenuButton = document.querySelector('.menu-button');
 
-function detect() {
+function switchMenuButton() {
   console.log('menu');
   menu.classList.toggle('show-menu');
+  openButton.classList.toggle('menu-button');
+  closeButton.classList.toggle('menu-button');
+  activeMenuButton = openButton.classList.contains('menu-button') ? openButton : closeButton;
+  activeMenuButton.addEventListener('click', switchMenuButton);
 }
 
-menuButton.addEventListener('click', detect);
+openButton.addEventListener('click', switchMenuButton);
