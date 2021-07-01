@@ -1,0 +1,67 @@
+.bg-blend-luminosity {
+  background-blend-mode: luminosity;
+}
+
+//Reusable class to place a coloured filter over a background image
+//Background colour and opacity must be specified on element's after
+//Element should be relative
+//Z-index from bottom to top: element -> element::after -> element's children to display
+.bg-filter {
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+//Reusable class to set bottom border
+//Bottom border colour and width must be specified on element's after
+.border-bottom {
+  &:after {
+    content: '';
+    height: 1px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    display: block;
+    padding-top: 15px;
+  }
+}
+
+//Change appearance to monochrome white
+.img-white {
+  filter: brightness(0) invert(1);
+}
+
+//Remove default styling from element
+.minimal {
+  border: none;
+  background: none;
+  background-color: none;
+  text-decoration: none;
+}
+
+/*
+========================================
+Past Dethfests
+========================================
+*/
+
+//Apply to desktop-view elements that shouldn't be displayed in mobile view
+//To show elements in desktop view, use desktop display unset
+.desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: unset;
+  }
+
+  //Apply to mobile-view elements that shouldn't be displayed in desktop view
+  .mobile {
+    display: none;
+  }
+}

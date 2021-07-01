@@ -4,12 +4,11 @@
   ========================================
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'imports/flex.scss';
+@import 'imports/font.scss';
+@import 'imports/general-utilities.scss';
+@import 'imports/custom.scss';
 
-
-$heading-font: 'Work Sans', sans-serif;
-$body-font: 'Lato', sans-serif;
 $orange: #ec5242;
 $grey: #d3d3d3;
 $p-y-menu: 15px;
@@ -34,13 +33,22 @@ $size-subheading: 30px;
 }
 
 //Default horizontal padding used throughout page
-@mixin default-padding-x($default-padding-x) {
+@mixin p-x-default($p-x-default) {
   .p-x-default {
-    padding-left: $default-padding-x;
-    padding-right: $default-padding-x;
+    padding-left: $p-x-default;
+    padding-right: $p-x-default;
   }
 }
-@include default-padding-x($default-padding-x: 15px);
+@include p-x-default($p-x-default: 15px);
+
+//Default vertical padding used throughout page
+@mixin p-y-default($p-y-default) {
+  .p-y-default {
+    padding-top: $p-y-default;
+    padding-bottom: $p-y-default;
+  }
+}
+@include p-y-default($p-y-default: 30px);
 
 //Font size for text above h1
 @mixin size-subheading($size-subheading) {
@@ -64,12 +72,6 @@ $size-subheading: 30px;
   ========================================
 */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: $body-font;
   font-weight: 400;
@@ -88,304 +90,36 @@ h2 {
   font-weight: 600;
 }
 
-.desktop {
-  display: none;
-}
-
-.heading {
-  font-family: $heading-font;
-  font-weight: 800;
-  font-size: 25px;
-}
-
-.font-orange {
+.color-orange {
   color: #ec5242;
-}
-
-.font-black {
-  color: black;
 }
 
 .color-grey {
   color: $grey;
 }
 
-.background-black {
+.color-white {
+  color: white;
+}
+
+.bg-black {
   background-color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-orange {
+  background-color: $orange;
 }
 
 .border-default {
   border: 2px solid $grey;
 }
 
-.center-text {
-  text-align: center;
-}
-
-.fill-fit {
-  height: 100%;
-  object-fit: cover;
-}
-
-.minimal {
-  border: none;
-  background: none;
-  text-decoration: none;
-}
-
-/*
-  ========================================
-  Reusable Flexbox classes
-  ========================================
-*/
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.align-center {
-  align-items: center;
-}
-
-/*
-  ========================================
-  Positioning classes
-  ========================================
-*/
-
-.position-absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.position-relative {
-  position: relative;
-}
-
-.position-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.sticky {
-  z-index: 100;
-}
-
-/*
-  ========================================
-  Font styling classes
-  ========================================
-*/
-
-.heading-35 {
-  font-size: 35px;
-}
-
-.font-bigger {
-  font-size: 20px
-}
-
-.font-big {
-  font-size: 18px;
-}
-
-.font-normal {
-  font-size: 16px;
-}
-
-.font-small {
-  font-size: 14px;
-}
-
-.font-smallest {
-  font-size: 12px;
-}
-
-.weight-bold {
-  font-weight: 700;
-}
-
-.weight-semi-bold {
-  font-weight: 600;
-}
-
-.weight-medium {
-  font-weight: 500;
-}
-
-.weight-regular {
-  font-weight: 400;
-}
-
-.body-30 {
-  font-size: 30px;
-}
-
-.font-18 {
-  font-size: 18px;
-}
-
-.italic {
-  font-style: italic;
-}
-
-/*
-  ========================================
-  Spacing classes
-  ========================================
-*/
-
-.m-b-10 {
-  margin-bottom: 10px;
-}
-
-.m-10 {
-  margin: 10px;
-}
-
-.m-t-15 {
-  margin-top: 15px;
-}
-
-.m-l-15 {
-  margin-left: 15px;
-}
-
-.m-b-15 {
-  margin-bottom: 15px;
-}
-
-.m-x-20 {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.m-b-30 {
-  margin-bottom: 30px;
-}
-
-.m-b-60 {
-  margin-bottom: 60px;
-}
-
-.m-t-30 {
-  margin-top: 30px;
-}
-
-.m-y-30 {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-// .m-t-10 {
-//   margin-top: 10px;
-// }
-
-.p-x-10 {
-  padding: 10px;
-}
-
-.p-l-15 {
-  padding-left: 15px;
-}
-
-.p-t-15 {
-  padding-top: 15px;
-}
-
-.p-x-15 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.p-y-15 {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.p-20 {
-  padding: 20px;
-}
-
-.p-x-20 {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.p-x-25-res {
-  padding-top: 25%;
-  padding-bottom: 25%;
-}
-
-.p-30 {
-  padding: 30px;
-}
-
-.p-x-30 {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.p-y-30 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.p-t-55 {
-  padding-top: 55px;
-}
-
-.w-25 {
-  width: 25%;
-}
-
-.w-30 {
-  width: 30%;
-}
-
-.w-45 {
-  width: 45%;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-.h-100 {
-  height: 100%;
-}
-
-.w-h-100 {
-  width: 100%;
-  height: 100%;
-}
-
-.min-h-200 {
-  min-height: 200px;
+.border-orange {
+  border: 2px solid $orange;
 }
 
 /*
@@ -394,19 +128,13 @@ h2 {
   ========================================
 */
 
+//Set background for headline and for heading text
 #headline {
-  height: 100vh;
-  background: url(../images/backgrounds/headline.jpg);
+  background-image: url(../images/backgrounds/headline.jpg);
   background-position: center;
-  background-color: white;
-  background-blend-mode: luminosity;
-  
-  > * + * {
-    margin-top: 10px;
-  }
 
   .background-text {
-    background: url(../images/backgrounds/headline-text.jpg);
+    background-image: url(../images/backgrounds/headline-text.jpg);
     background-position: right 39% bottom 25%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -417,12 +145,12 @@ h2 {
 
 /*
   ========================================
-  Divider
+  Divider image used between sections
   ========================================
 */
 
 .divider {
-  background: url(../images/divider.jpg);
+  background-image: url(../images/divider.jpg);
   height: 29px;
 }
 
@@ -432,54 +160,34 @@ h2 {
   ========================================
 */
 
-#program {
-  .program-card {
-    background-color: rgba(211, 211, 211, 0.25);
-
-  }
-
-  .program-button {
-    background-color: $orange;
-    border: none;
-    color: inherit;
-  }
+//Set transparency of background colour
+.program-card {
+  background-color: rgba(211, 211, 211, 0.25);
 }
 
 /*
 ========================================
-Grey pattern for Program and Partners
+Grey pattern background for Program and Partners
 ========================================
 */
 
-.background-pattern {
-  background: url(../images/backgrounds/grey-pattern.jpg);
+.bg-pattern {
+  background-image: url(../images/backgrounds/grey-pattern.jpg);
   background-size: cover;
   background-position: center;
 }
 
 /*
 ========================================
-Custom width bottom border for Program and Featured Bands
+Section heading in Program and Featured Bands
 ========================================
 */
 
-//Common CSS
-.border-bottom {
-  &:after {
-    content: '';
-    height: 1px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    display: block;
-    padding-top: 15px;
-  }
-}
-
-//Custom CSS for bottom border of cards heading in Program and Featured Bands
-.cards-heading {
+//Set bottom border of section heading using border-bottom class
+.section-heading {
   &:after {
     border-bottom-color: $orange;
-    width: 15%;
+    width: 40px;
   }
 }
 
@@ -489,51 +197,56 @@ Featured Bands
 ========================================
 */
 
-#bands {
-  .band {
-    //Custom CSS for bottom border of country name
-    .band-country {
-      &:after {
-        border-bottom-color: $grey;
-        width: 7.5%;
-      }
-    }
-  }
-}
-
-.partner-row {
-  flex-wrap: wrap;
-  div {
-    flex-grow: 1;
-    img {
-      height: 5vw;
-      min-height: 25px;
-      object-fit: contain;
-      filter: brightness(0) invert(1);
-    }
+//Set bottom border of country name using border-bottom class
+.band-country {
+  &:after {
+    border-bottom-color: $grey;
+    width: 20px;
   }
 }
 
 /*
 ========================================
-CSS specific to About page
+Footer
 ========================================
 */
 
-.border-orange {
-  border: 2px solid $orange;
+//Apply black filter using bg-filter class
+footer {
+  background-image: url(../images/backgrounds/footer.jpg);
+  background-size: cover;
+  background-position: left 0px bottom 35%;
+  z-index: 1;
+
+  &:after {
+    background-color: black;
+    opacity: 0.75;
+    z-index: 2;
+  }
+
+  > * {
+    z-index: 3;
+  }
 }
 
+/*
+========================================
+Past Dethfests
+========================================
+*/
+
+//Apply orange filter using bg-filter class
 .event {
-  &:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  z-index: 1;
+
+  &:after {
     background-color: $orange;
     opacity: 0.5;
+    z-index: 2;
+  }
+
+  .event-text {
+    z-index: 3;
   }
 }
 
@@ -543,21 +256,11 @@ CSS specific to About page
   // to automatically style height of menu-logo
   $menu-height: 60px;
 
-  @include default-padding-x($default-padding-x: 10vw);
-
+  @include p-x-default($p-x-default: 10vw);
+  @include p-y-default($p-y-default: 45px);
   @include m-l-menu($m-l-menu: 1vw);
-
   @include size-subheading($size-subheading: 40px);
-
   @include p-r-headline($p-r-headline: 40vw);
-
-  .desktop {
-    display: unset;
-  }
-
-  .mobile {
-    display: none;
-  }
 
   /*
   ========================================
@@ -571,36 +274,6 @@ CSS specific to About page
 
   h1 {
     font-size: 60px;
-  }
-
-  /*
-  ========================================
-  Main Program
-  ========================================
-  */
-  .program-cards {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .program-card {
-    width: 24%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content:unset;
-    margin-bottom: 0px;
-    > * {
-      text-align:center;
-      flex-direction: row;
-      width: 100%;
-      margin-left: 0px;
-      img {
-        width: 100%;
-        // min-height: 100px;
-      }
-      & + * {
-        margin-top: 15px;
-      }
-    }
   }
 
 }

@@ -3,103 +3,13 @@
   Imports, variables and mixins
   ========================================
 */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
-.p-y-menu {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.p-x-default {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.size-subheading {
-  font-size: 30px;
-}
-
-/*
-  ========================================
-  General styling
-  ========================================
-*/
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  color: white;
-}
-
-h1 {
-  font-family: "Work Sans", sans-serif;
-  font-size: 45px;
-  font-weight: 900;
-}
-
-h2 {
-  font-family: "Work Sans", sans-serif;
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.desktop {
-  display: none;
-}
-
-.heading {
-  font-family: "Work Sans", sans-serif;
-  font-weight: 800;
-  font-size: 25px;
-}
-
-.font-orange {
-  color: #ec5242;
-}
-
-.font-black {
-  color: black;
-}
-
-.color-grey {
-  color: #d3d3d3;
-}
-
-.background-black {
-  background-color: black;
-}
-
-.border-default {
-  border: 2px solid #d3d3d3;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.fill-fit {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.minimal {
-  border: none;
-  background: none;
-  text-decoration: none;
-}
-
 /*
   ========================================
   Reusable Flexbox classes
   ========================================
 */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,29 +53,39 @@ h2 {
           align-items: center;
 }
 
-/*
-  ========================================
-  Positioning classes
-  ========================================
-*/
-.position-absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
+.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.position-relative {
-  position: relative;
+.grow {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-.position-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.sticky {
-  z-index: 100;
+@media (min-width: 768px) {
+  .d-flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .d-flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .d-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .d-justify-unset {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
 }
 
 /*
@@ -173,8 +93,16 @@ h2 {
   Font styling classes
   ========================================
 */
+.heading {
+  font-family: "Work Sans", sans-serif;
+}
+
 .heading-35 {
   font-size: 35px;
+}
+
+.heading-25 {
+  font-size: 25px;
 }
 
 .font-bigger {
@@ -197,6 +125,10 @@ h2 {
   font-size: 12px;
 }
 
+.weight-black {
+  font-weight: 800;
+}
+
 .weight-bold {
   font-weight: 700;
 }
@@ -213,41 +145,63 @@ h2 {
   font-weight: 400;
 }
 
-.body-30 {
-  font-size: 30px;
-}
-
-.font-18 {
-  font-size: 18px;
-}
-
 .italic {
   font-style: italic;
 }
 
+.center-text {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 /*
   ========================================
-  Spacing classes
+  Spacing classes: margin
   ========================================
 */
+.m-10 {
+  margin: 10px;
+}
+
+.m-y-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
 .m-b-10 {
   margin-bottom: 10px;
 }
 
-.m-10 {
-  margin: 10px;
+.m-x-15 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.m-y-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .m-t-15 {
   margin-top: 15px;
 }
 
-.m-l-15 {
-  margin-left: 15px;
-}
-
 .m-b-15 {
   margin-bottom: 15px;
+}
+
+.m-l-15 {
+  margin-left: 15px;
 }
 
 .m-x-20 {
@@ -257,6 +211,14 @@ h2 {
 
 .m-b-30 {
   margin-bottom: 30px;
+}
+
+.m-t-45 {
+  margin-top: 45px;
+}
+
+.m-b-45 {
+  margin-bottom: 45px;
 }
 
 .m-b-60 {
@@ -272,16 +234,19 @@ h2 {
   margin-bottom: 30px;
 }
 
+/*
+  ========================================
+  Spacing classes: padding
+  ========================================
+*/
+.p-y-7h {
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
+
 .p-x-10 {
-  padding: 10px;
-}
-
-.p-l-15 {
-  padding-left: 15px;
-}
-
-.p-t-15 {
-  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .p-x-15 {
@@ -292,6 +257,14 @@ h2 {
 .p-y-15 {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.p-t-15 {
+  padding-top: 15px;
+}
+
+.p-l-15 {
+  padding-left: 15px;
 }
 
 .p-20 {
@@ -326,6 +299,21 @@ h2 {
   padding-top: 55px;
 }
 
+/*
+  ========================================
+  Sizing classes
+  ========================================
+*/
+.fit-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.fit-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .w-25 {
   width: 25%;
 }
@@ -334,8 +322,16 @@ h2 {
   width: 30%;
 }
 
+.w-40 {
+  width: 40%;
+}
+
 .w-45 {
   width: 45%;
+}
+
+.w-48 {
+  width: 48%;
 }
 
 .w-50 {
@@ -355,8 +351,208 @@ h2 {
   height: 100%;
 }
 
+.h-3vw {
+  height: 3vw;
+}
+
+.min-h-25 {
+  min-height: 25px;
+}
+
 .min-h-200 {
   min-height: 200px;
+}
+
+.max-h-40 {
+  max-height: 40px;
+}
+
+.fill-vh {
+  height: 100vh;
+}
+
+/*
+  ========================================
+  Positioning classes
+  ========================================
+*/
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sticky {
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .d-w-24 {
+    width: 24%;
+  }
+  .d-w-50 {
+    width: 50%;
+  }
+  .d-w-48 {
+    width: 48%;
+  }
+  .d-w-100 {
+    width: 100%;
+  }
+  .d-m-0 {
+    margin: 0px;
+  }
+  .d-m-t-15 {
+    margin-top: 15px;
+  }
+  .d-m-r-45 {
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+  .d-m-l-45 {
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+  .p-x-about {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+}
+
+.bg-blend-luminosity {
+  background-blend-mode: luminosity;
+}
+
+.bg-filter:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.border-bottom:after {
+  content: '';
+  height: 1px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  display: block;
+  padding-top: 15px;
+}
+
+.img-white {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.minimal {
+  border: none;
+  background: none;
+  background-color: none;
+  text-decoration: none;
+}
+
+/*
+========================================
+Past Dethfests
+========================================
+*/
+.desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: unset;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+.p-y-menu {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.p-x-default {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.p-y-default {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.size-subheading {
+  font-size: 30px;
+}
+
+/*
+  ========================================
+  General styling
+  ========================================
+*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.color-orange {
+  color: #ec5242;
+}
+
+.color-grey {
+  color: #d3d3d3;
+}
+
+.color-white {
+  color: white;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-orange {
+  background-color: #ec5242;
+}
+
+.border-default {
+  border: 2px solid #d3d3d3;
+}
+
+.border-orange {
+  border: 2px solid #ec5242;
 }
 
 /*
@@ -365,19 +561,12 @@ h2 {
   ========================================
 */
 #headline {
-  height: 100vh;
-  background: url(../images/backgrounds/headline.jpg);
+  background-image: url(../images/backgrounds/headline.jpg);
   background-position: center;
-  background-color: white;
-  background-blend-mode: luminosity;
-}
-
-#headline > * + * {
-  margin-top: 10px;
 }
 
 #headline .background-text {
-  background: url(../images/backgrounds/headline-text.jpg);
+  background-image: url(../images/backgrounds/headline-text.jpg);
   background-position: right 39% bottom 25%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -388,11 +577,11 @@ h2 {
 
 /*
   ========================================
-  Divider
+  Divider image used between sections
   ========================================
 */
 .divider {
-  background: url(../images/divider.jpg);
+  background-image: url(../images/divider.jpg);
   height: 29px;
 }
 
@@ -401,44 +590,29 @@ h2 {
   Program
   ========================================
 */
-#program .program-card {
+.program-card {
   background-color: rgba(211, 211, 211, 0.25);
-}
-
-#program .program-button {
-  background-color: #ec5242;
-  border: none;
-  color: inherit;
 }
 
 /*
 ========================================
-Grey pattern for Program and Partners
+Grey pattern background for Program and Partners
 ========================================
 */
-.background-pattern {
-  background: url(../images/backgrounds/grey-pattern.jpg);
+.bg-pattern {
+  background-image: url(../images/backgrounds/grey-pattern.jpg);
   background-size: cover;
   background-position: center;
 }
 
 /*
 ========================================
-Custom width bottom border for Program and Featured Bands
+Section heading in Program and Featured Bands
 ========================================
 */
-.border-bottom:after {
-  content: '';
-  height: 1px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  display: block;
-  padding-top: 15px;
-}
-
-.cards-heading:after {
+.section-heading:after {
   border-bottom-color: #ec5242;
-  width: 15%;
+  width: 40px;
 }
 
 /*
@@ -446,55 +620,60 @@ Custom width bottom border for Program and Featured Bands
 Featured Bands
 ========================================
 */
-#bands .band .band-country:after {
+.band-country:after {
   border-bottom-color: #d3d3d3;
-  width: 7.5%;
-}
-
-.partner-row {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.partner-row div {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.partner-row div img {
-  height: 5vw;
-  min-height: 25px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+  width: 20px;
 }
 
 /*
 ========================================
-CSS specific to About page
+Footer
 ========================================
 */
-.border-orange {
-  border: 2px solid #ec5242;
+footer {
+  background-image: url(../images/backgrounds/footer.jpg);
+  background-size: cover;
+  background-position: left 0px bottom 35%;
+  z-index: 1;
 }
 
-.event:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+footer:after {
+  background-color: black;
+  opacity: 0.75;
+  z-index: 2;
+}
+
+footer > * {
+  z-index: 3;
+}
+
+/*
+========================================
+Past Dethfests
+========================================
+*/
+.event {
+  z-index: 1;
+}
+
+.event:after {
   background-color: #ec5242;
   opacity: 0.5;
+  z-index: 2;
+}
+
+.event .event-text {
+  z-index: 3;
 }
 
 @media (min-width: 768px) {
   .p-x-default {
     padding-left: 10vw;
     padding-right: 10vw;
+  }
+  .p-y-default {
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
   .m-l-menu {
     margin-left: 1vw;
@@ -504,12 +683,6 @@ CSS specific to About page
   }
   .p-r-headline {
     padding-right: 40vw;
-  }
-  .desktop {
-    display: unset;
-  }
-  .mobile {
-    display: none;
   }
   /*
   ========================================
@@ -521,48 +694,6 @@ CSS specific to About page
   }
   h1 {
     font-size: 60px;
-  }
-  /*
-  ========================================
-  Main Program
-  ========================================
-  */
-  .program-cards {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .program-card {
-    width: 24%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    margin-bottom: 0px;
-  }
-  .program-card > * {
-    text-align: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    margin-left: 0px;
-  }
-  .program-card > * img {
-    width: 100%;
-  }
-  .program-card > * + * {
-    margin-top: 15px;
   }
 }
 

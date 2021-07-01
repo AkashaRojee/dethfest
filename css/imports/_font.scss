@@ -1,0 +1,72 @@
+
+/*
+  ========================================
+  Font styling classes
+  ========================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$heading-font: 'Work Sans', sans-serif;
+$body-font: 'Lato', sans-serif;
+
+.heading {
+  font-family: $heading-font;
+}
+
+.heading-35 {
+  font-size: 35px;
+}
+
+.heading-25 {
+  font-size: 25px;
+}
+
+.font-bigger {
+  font-size: 20px
+}
+
+.font-big {
+  font-size: 18px;
+}
+
+.font-normal {
+  font-size: 16px;
+}
+
+.font-small {
+  font-size: 14px;
+}
+
+.font-smallest {
+  font-size: 12px;
+}
+
+.weight-black {
+  font-weight: 800;
+}
+
+.weight-bold {
+  font-weight: 700;
+}
+
+.weight-semi-bold {
+  font-weight: 600;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.weight-regular {
+  font-weight: 400;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.center-text {
+  text-align: center;
+}
