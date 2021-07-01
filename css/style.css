@@ -581,7 +581,9 @@ h2 {
 .show-menu a {
   display: block;
   clear: right;
-  margin-top: 15px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
 }
 
 /*
