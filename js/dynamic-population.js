@@ -60,7 +60,7 @@ function structureCard(card, object) {
 }
 
 //Create elements for program/card card
-function createCard(object) {
+function createCard(object, index) {
 
   switch(object.constructor.name) {
 
@@ -86,7 +86,7 @@ function createCard(object) {
 
       return {
         'band' : 
-          createElement('div', 'band flex-col m-b-60 d-m-r-45'),
+          createElement('div', `band flex-col${index === 5 ? '' : ' m-b-60'}`),
         'band-image' :
           createElement('img', 'band-image flex-row m-b-10', 
           { src: `./images/bands/${object.image}.png`,
@@ -103,10 +103,10 @@ function createCard(object) {
 //For each band object, create card elements, structure them, and append to parents
 function populateFeaturedSection() {
   let bandSection = document.getElementById('bands');
-  let bandColContainer = createElement('div', 'band-col-container flex-row wrap');
-  let bandCol = createElement('div', 'band-col flex-col w-100 d-w-50');
+  let bandColContainer = createElement('div', 'band-col-container flex-row justify-between wrap');
+  let bandCol = createElement('div', 'band-col flex-col w-100 d-w-45');
   bands.forEach((band, index) => {
-    let card = createCard(band);
+    let card = createCard(band, index);
     card = structureCard(card, band);
 
     //Append every 3 band cards to a band col, and append every band col to a band col container
@@ -123,7 +123,7 @@ function populateFeaturedSection() {
 function populateProgramSection() {
   let programsContainer = document.querySelector('.programs-container');
   programs.forEach((program, index) => {
-    let card = createCard(program);
+    let card = createCard(program, index);
     card = structureCard(card, program);
     programsContainer.append(card);
   });

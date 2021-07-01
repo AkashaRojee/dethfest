@@ -403,6 +403,9 @@
   .d-w-50 {
     width: 50%;
   }
+  .d-w-45 {
+    width: 45%;
+  }
   .d-w-48 {
     width: 48%;
   }
@@ -417,7 +420,6 @@
   }
   .d-m-r-45 {
     margin-bottom: 30px;
-    margin-right: 30px;
   }
   .d-m-l-45 {
     margin-bottom: 30px;
