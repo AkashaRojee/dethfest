@@ -2,6 +2,7 @@ const openButton = document.querySelector('.menu-button');
 const menu = document.querySelector('.menu-links');
 const closeButton = menu.querySelector('button');
 let activeMenuButton = document.querySelector('.menu-button');
+let menuLinks = menu.querySelectorAll('a');
 
 // When mobile menu is opened/closed, set active menu button to close/open button respectively
 function switchMenuButton() {
@@ -13,4 +14,4 @@ function switchMenuButton() {
   activeMenuButton.addEventListener('click', switchMenuButton);
 }
 
-openButton.addEventListener('click', switchMenuButton);
+addEventListeners([openButton, ...menuLinks], 'click', switchMenuButton);
