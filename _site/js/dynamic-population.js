@@ -26,7 +26,7 @@ programs = [
 
   new Program('shows', 'Shows', 'Adrenaline-fuelled shows with fire acts, acrobatics, sword fights, and more.'),
 
-  new Program('karaoke', 'Karaoke', 'At the end of each day, Metal karaokes to relax around or show your talents.'),
+  new Program('karaoke', 'Karaoke', 'At the end of the day, Metal karaokes to relax around or show your talents.'),
 ];
 
 // Create array of Band objects
