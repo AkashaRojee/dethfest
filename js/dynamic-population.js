@@ -78,7 +78,7 @@ function createCard(object, index) {
         'program-title':
           createElement('span', 'program-title flex-col d-flex-row justify-center center-text w-25 d-w-100 color-orange font-big weight-bold vertical-center d-m-t-15', {}, `${object.title}`),
         'program-description':
-          createElement('p', 'program-description flex-col d-flex-row justify-center w-40 d-w-100 font-small d-m-t-1', {}, `${object.description}`),
+          createElement('p', 'program-description flex-col d-flex-row justify-center w-40 d-w-100 font-small d-m-t-15 d-center-text', {}, `${object.description}`),
       };
 
     default:

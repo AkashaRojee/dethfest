@@ -70,3 +70,9 @@ $body-font: 'Lato', sans-serif;
 .center-text {
   text-align: center;
 }
+
+@media (min-width: 768px) {
+  .d-center-text {
+    text-align: center;
+  }
+}

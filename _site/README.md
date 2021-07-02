@@ -34,7 +34,7 @@ I have personalised the template to build a website for a fictious Metal concert
 
 ## Live Demo
 
-_<a href="https://AkashaRojee.github.io/dethfest">View Dethfest website</a>_
+[Live Demo Link](https://AkashaRojee.github.io/dethfest)
 
 ## Getting Started
 
@@ -42,7 +42,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Jekyll - _<a href="https://jekyllrb.com/docs/installation" target="_blank">view the Jekyll docs for the installation guide_</a>
+Jekyll - _<a href="https://jekyllrb.com/docs/installation" target="_blank">view the Jekyll docs for the installation guide_
 
 ### Usage
 
