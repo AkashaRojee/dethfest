@@ -1,4 +1,4 @@
-.vscode
-.svn
-_site
-.jekyll-cache
+.vscode/
+.svn/
+_site/
+.jekyll-cache/
