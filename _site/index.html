@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+  <html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dethfest 2021 Concert Website">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/a221a68dbc.js" crossorigin="anonymous"></script>
+  <title>Dethfest 2021</title>
+  <link rel="icon" href="/images/df.png" />
+  <!-- <base href="http://akasharojee.github.io/concert-website/" /> -->
+</head><body><header>
+  <nav class="flex-row justify-between align-center position-fixed sticky bg-black w-100 p-x-default p-y-menu">     
+    <a class="desktop" href="https://akasharojee.github.io/concert-website/">
+      <img class="menu-logo" src="images/dethfest-white.webp" alt="Dethfest logo" />
+    </a>
+    <button type="button" class="mobile menu-button minimal" aria-label="Mobile menu button">
+      <i class="fas fa-bars fa-3x color-grey"></i>
+    </button>
+    <div class="menu-links desktop font-small weight-bold">
+      <button class="minimal mobile" type="button"><i class="fas fa-window-close fa-3x color-grey"></i></button>
+      <a class="minimal color-orange" href="/about">About</a>
+      <a class="minimal color-grey m-l-menu" href="./#program">Program</a>
+      <a class="minimal color-grey m-l-menu" href="./#bands">Bands</a>
+      <a class="minimal color-grey m-l-menu" href="#join">Join</a>
+      <a class="minimal color-grey m-l-menu" href="#partners">Partners</a>
+      <a class="minimal color-grey m-l-menu" href="#news">News</a>
+      <a class="minimal color-orange m-l-menu p-x-10 p-y-7h border-orange" href="#campaign">CC Campaign</a>
+    </div>
+  </nav>
+</header><main>
+        
+        <!-- Headline -->
+
+<section id="headline" class="flex-col justify-center fill-vh bg-white bg-blend-luminosity p-t-55 p-x-default p-r-headline">
+
+  <p class="size-subheading color-orange">Revival</p>
+
+  <h1 class="background-text m-y-10">DETHFEST CONCERT 2021</h1>
+
+  <p class="bg-black border-default m-y-10 p-20">A joyful celebration beliving in the value of openness and sharing, creating a positive change with people from over 80 countries is taking place in October, in Korea</p>
+
+  <p class="heading heading-25 weight-black m-t-10">2021.10.15(THU) ~ 16(FRI)</p>
+
+  <p class="font-big m-t-10">@ National Museum of Korea, Art Center Nabi and more</p>
+
+</section>
+
+<section class="divider"></section>
+
+<!-- Main Program -->
+
+<section id="program" class="flex-col bg-pattern p-x-default p-y-default">
+
+  <h2 class="section-heading border-bottom flex-col align-center m-b-30">Program</h2>
+  
+  <div class="programs-container flex-col justify-between d-flex-row">
+    <!-- Program cards are dynamically populated here with JS -->
+  </div>
+
+  <div class="flex-row justify-center m-t-15">
+    <button class="mobile flex-row justify-center color-white bg-orange p-20 minimal" type="button">
+      <span class="heading heading-25 weight-semi-bold font-big">Join Dethfest 2021</span>
+    </button>
+    <a class="desktop color-grey weight-medium" href="#">SEE THE WHOLE PROGRAM</a>
+  </div>
+
+</section>
+
+<section class="divider"></section>
+
+<!-- Featured Bands -->
+
+<section id="bands" class="bg-black p-x-default p-y-default">
+
+  <h2 class="section-heading border-bottom flex-col align-center m-b-30">Featured Bands</h2>
+
+  <!-- Band cards are dynamically populated here with JS -->
+
+</section>
+
+<section class="divider"></section><section id="partners" class="bg-pattern p-x-default p-y-default">
+
+  <h2 class="section-heading border-bottom flex-col align-center m-b-30">Partners</h2>
+
+  <div class="partner-row flex-row wrap img-white">
+    <div class="flex-col grow m-10">
+      <img class="h-3vw min-h-25 fit-contain" src="images/partners/metaltix.webp" alt="Metaltix logo">
+    </div>
+    <div class="flex-col grow m-10">
+      <img class="h-3vw min-h-25 fit-contain" src="images/partners/metal-hammer.webp" alt="Metal Hammer logo">
+    </div>
+    <div class="flex-col grow m-10">
+      <img class="h-3vw min-h-25 fit-contain" src="images/partners/wacken.webp" alt="Wacken logo">
+    </div>
+    <div class="flex-col grow m-10">
+      <img class="h-3vw min-h-25 fit-contain" src="images/partners/season-of-mist.webp" alt="Season of Mist logo">
+    </div>
+    <div class="flex-col grow m-10">
+      <img class="h-3vw min-h-25 fit-contain" src="images/partners/world-metal-congress.webp" alt="World Metal Congress logo">
+    </div>
+  </div>
+
+</section>
+
+<section class="divider"></section></main><footer class="flex-col p-x-default position-relative bg-white bg-blend-luminosity bg-filter">
+
+  <div class="flex-row justify-between p-y-default">
+
+    <div class="flex-col justify-center w-45">
+      <img class="max-h-40 fit-contain" src="images/dethfest-white.webp" alt="Dethfest logo">
+    </div>
+
+    <p class="flex-col justify-center align-center w-45 color-white font-smallest">
+      2021 Dethfest. No Rights Reserved.
+    </p>
+
+  </div>
+
+  <p class="center-text italic font-smallest m-b-15">
+    Made with love, coffee, and metal by <a class="color-white weight-bold" href="https://github.com/AkashaRojee">Akasha Rojee</a>
+  </p>
+
+</footer><script src="js/library.js"></script>
+      <script src="js/dynamic-population.js"></script>
+      <script src="js/menu.js"></script>
+    </body>
+</html>
