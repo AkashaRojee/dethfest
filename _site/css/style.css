@@ -1,0 +1,761 @@
+/*
+  ========================================
+  Imports, variables and mixins
+  ========================================
+*/
+
+/*
+  ========================================
+  Reusable Flexbox classes
+  ========================================
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.flex-row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.justify-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.justify-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.grow {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+  .d-flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .d-flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .d-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .d-justify-unset {
+    -webkit-box-pack: unset;
+    -ms-flex-pack: unset;
+    justify-content: unset;
+  }
+}
+
+/*
+  ========================================
+  Font styling classes
+  ========================================
+*/
+.heading {
+  font-family: "Work Sans", sans-serif;
+}
+
+.heading-35 {
+  font-size: 35px;
+}
+
+.heading-25 {
+  font-size: 25px;
+}
+
+.font-bigger {
+  font-size: 20px;
+}
+
+.font-big {
+  font-size: 18px;
+}
+
+.font-normal {
+  font-size: 16px;
+}
+
+.font-small {
+  font-size: 14px;
+}
+
+.font-smallest {
+  font-size: 12px;
+}
+
+.weight-black {
+  font-weight: 800;
+}
+
+.weight-bold {
+  font-weight: 700;
+}
+
+.weight-semi-bold {
+  font-weight: 600;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.weight-regular {
+  font-weight: 400;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.center-text {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+  ========================================
+  Spacing classes: margin
+  ========================================
+*/
+.m-10 {
+  margin: 10px;
+}
+
+.m-y-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.m-x-15 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.m-y-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.m-l-15 {
+  margin-left: 15px;
+}
+
+.m-x-20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
+}
+
+.m-t-45 {
+  margin-top: 45px;
+}
+
+.m-b-45 {
+  margin-bottom: 45px;
+}
+
+.m-b-60 {
+  margin-bottom: 60px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
+}
+
+.m-y-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*
+  ========================================
+  Spacing classes: padding
+  ========================================
+*/
+.p-y-7h {
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
+
+.p-x-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.p-x-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.p-y-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.p-t-15 {
+  padding-top: 15px;
+}
+
+.p-l-15 {
+  padding-left: 15px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.p-x-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.p-x-25-res {
+  padding-top: 25%;
+  padding-bottom: 25%;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.p-x-30 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.p-y-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.p-t-55 {
+  padding-top: 55px;
+}
+
+/*
+  ========================================
+  Sizing classes
+  ========================================
+*/
+.fit-contain {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.fit-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+.w-48 {
+  width: 48%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-h-100 {
+  width: 100%;
+  height: 100%;
+}
+
+.h-3vw {
+  height: 3vw;
+}
+
+.min-h-25 {
+  min-height: 25px;
+}
+
+.min-h-200 {
+  min-height: 200px;
+}
+
+.max-h-40 {
+  max-height: 40px;
+}
+
+.fill-vh {
+  height: 100vh;
+}
+
+/*
+  ========================================
+  Positioning classes
+  ========================================
+*/
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sticky {
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .d-w-24 {
+    width: 24%;
+  }
+
+  .d-w-50 {
+    width: 50%;
+  }
+
+  .d-w-45 {
+    width: 45%;
+  }
+
+  .d-w-48 {
+    width: 48%;
+  }
+
+  .d-w-100 {
+    width: 100%;
+  }
+
+  .d-m-0 {
+    margin: 0;
+  }
+
+  .d-m-t-15 {
+    margin-top: 15px;
+  }
+
+  .d-m-r-45 {
+    margin-bottom: 30px;
+  }
+
+  .d-m-l-45 {
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+
+  .p-x-about {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+}
+
+.bg-blend-luminosity {
+  background-blend-mode: luminosity;
+}
+
+.bg-filter::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.border-bottom::after {
+  content: '';
+  height: 1px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  display: block;
+  padding-top: 15px;
+}
+
+.img-white {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.minimal {
+  border: none;
+  background: none;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/*
+========================================
+Past Dethfests
+========================================
+*/
+.desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: unset;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+.p-y-menu {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.p-x-default {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.p-y-default {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.size-subheading {
+  font-size: 30px;
+}
+
+/*
+  ========================================
+  General styling
+  ========================================
+*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.color-orange {
+  color: #ec5242;
+}
+
+.color-grey {
+  color: #d3d3d3;
+}
+
+.color-white {
+  color: white;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-orange {
+  background-color: #ec5242;
+}
+
+.border-default {
+  border: 2px solid #d3d3d3;
+}
+
+.border-orange {
+  border: 2px solid #ec5242;
+}
+
+/*
+  ========================================
+  Mobile menu
+  ========================================
+*/
+.show-menu {
+  display: unset;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.show-menu button {
+  float: right;
+  margin-bottom: 15px;
+}
+
+.show-menu a {
+  display: block;
+  clear: right;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+/*
+  ========================================
+  Headline
+  ========================================
+*/
+#headline {
+  background-image: url(../images/backgrounds/headline.webp);
+  background-position: center;
+}
+
+#headline .background-text {
+  background-image: url(../images/backgrounds/headline-text.webp);
+  background-position: right 39% bottom 25%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: brightness(200%);
+  filter: brightness(200%);
+}
+
+/*
+  ========================================
+  Divider image used between sections
+  ========================================
+*/
+.divider {
+  background-image: url(../images/divider.webp);
+  height: 29px;
+}
+
+/*
+  ========================================
+  Program
+  ========================================
+*/
+.program-card {
+  background-color: rgba(211, 211, 211, 0.25);
+}
+
+/*
+========================================
+Grey pattern background for Program and Partners
+========================================
+*/
+.bg-pattern {
+  background-image: url(../images/backgrounds/grey-pattern.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+/*
+========================================
+Section heading in Program and Featured Bands
+========================================
+*/
+.section-heading::after {
+  border-bottom-color: #ec5242;
+  width: 40px;
+}
+
+/*
+========================================
+Featured Bands
+========================================
+*/
+.band-country::after {
+  border-bottom-color: #d3d3d3;
+  width: 20px;
+}
+
+/*
+========================================
+Footer
+========================================
+*/
+footer {
+  background-image: url(../images/backgrounds/footer.webp);
+  background-size: cover;
+  background-position: left 0 bottom 35%;
+  z-index: 1;
+}
+
+footer::after {
+  background-color: black;
+  opacity: 0.75;
+  z-index: 2;
+}
+
+footer > * {
+  z-index: 3;
+}
+
+/*
+========================================
+Past Dethfests
+========================================
+*/
+.event {
+  z-index: 1;
+}
+
+.event::after {
+  background-color: #ec5242;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.event .event-text {
+  z-index: 3;
+}
+
+@media (min-width: 768px) {
+  .p-x-default {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  .p-y-default {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .m-l-menu {
+    margin-left: 1vw;
+  }
+
+  .size-subheading {
+    font-size: 40px;
+  }
+
+  .p-r-headline {
+    padding-right: 40vw;
+  }
+
+  /*
+  ========================================
+  Desktop header
+  ========================================
+  */
+  .menu-logo {
+    height: calc(60px - (15px * 2));
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 890px) {
+  .p-r-headline {
+    padding-right: 30vw;
+  }
+}
+
+@media (min-width: 850px) {
+  .m-l-menu {
+    margin-left: 2vw;
+  }
+}
