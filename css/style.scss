@@ -14,7 +14,7 @@ $grey: #d3d3d3;
 $p-x-default: 15px;
 $p-y-menu: 15px;
 $m-l-menu: 1vw;
-$p-r-headline: 0vw;
+$p-r-headline: 0;
 $size-subheading: 30px;
 
 //Horizontal menu padding
@@ -24,6 +24,7 @@ $size-subheading: 30px;
     padding-bottom: $p-y-menu;
   }
 }
+
 @include p-y-menu($p-y-menu: 15px);
 
 //Margin to the left of each menu item
@@ -40,6 +41,7 @@ $size-subheading: 30px;
     padding-right: $p-x-default;
   }
 }
+
 @include p-x-default($p-x-default: 15px);
 
 //Default vertical padding used throughout page
@@ -49,6 +51,7 @@ $size-subheading: 30px;
     padding-bottom: $p-y-default;
   }
 }
+
 @include p-y-default($p-y-default: 30px);
 
 //Font size for text above h1
@@ -57,6 +60,7 @@ $size-subheading: 30px;
     font-size: $size-subheading;
   }
 }
+
 @include size-subheading($size-subheading: 30px);
 
 //Padding to the right of headline
@@ -162,14 +166,13 @@ h2 {
 
 //Set background for headline and for heading text
 #headline {
-  background-image: url(../images/backgrounds/headline.jpg);
+  background-image: url(../images/backgrounds/headline.webp);
   background-position: center;
 
   .background-text {
-    background-image: url(../images/backgrounds/headline-text.jpg);
+    background-image: url(../images/backgrounds/headline-text.webp);
     background-position: right 39% bottom 25%;
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: brightness(200%);
   }
@@ -182,7 +185,7 @@ h2 {
 */
 
 .divider {
-  background-image: url(../images/divider.jpg);
+  background-image: url(../images/divider.webp);
   height: 29px;
 }
 
@@ -204,7 +207,7 @@ Grey pattern background for Program and Partners
 */
 
 .bg-pattern {
-  background-image: url(../images/backgrounds/grey-pattern.jpg);
+  background-image: url(../images/backgrounds/grey-pattern.webp);
   background-size: cover;
   background-position: center;
 }
@@ -217,7 +220,7 @@ Section heading in Program and Featured Bands
 
 //Set bottom border of section heading using border-bottom class
 .section-heading {
-  &:after {
+  &::after {
     border-bottom-color: $orange;
     width: 40px;
   }
@@ -231,7 +234,7 @@ Featured Bands
 
 //Set bottom border of country name using border-bottom class
 .band-country {
-  &:after {
+  &::after {
     border-bottom-color: $grey;
     width: 20px;
   }
@@ -245,12 +248,12 @@ Footer
 
 //Apply black filter using bg-filter class
 footer {
-  background-image: url(../images/backgrounds/footer.jpg);
+  background-image: url(../images/backgrounds/footer.webp);
   background-size: cover;
-  background-position: left 0px bottom 35%;
+  background-position: left 0 bottom 35%;
   z-index: 1;
 
-  &:after {
+  &::after {
     background-color: black;
     opacity: 0.75;
     z-index: 2;
@@ -271,7 +274,7 @@ Past Dethfests
 .event {
   z-index: 1;
 
-  &:after {
+  &::after {
     background-color: $orange;
     opacity: 0.5;
     z-index: 2;
@@ -299,7 +302,7 @@ Past Dethfests
   Desktop header
   ========================================
   */
-  
+
   .menu-logo {
     height: calc(#{$menu-height} - (#{$p-y-menu} * 2));
   }
@@ -307,7 +310,6 @@ Past Dethfests
   h1 {
     font-size: 60px;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 890px) {

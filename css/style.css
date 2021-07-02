@@ -3,6 +3,7 @@
   Imports, variables and mixins
   ========================================
 */
+
 /*
   ========================================
   Reusable Flexbox classes
@@ -10,81 +11,83 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 .flex-row {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .flex-col {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .justify-center {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .justify-between {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .justify-around {
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .align-center {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .wrap {
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .grow {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 @media (min-width: 768px) {
   .d-flex-row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
+
   .d-flex-col {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
+
   .d-wrap {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
+
   .d-justify-unset {
     -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
+    -ms-flex-pack: unset;
+    justify-content: unset;
   }
 }
 
@@ -157,7 +160,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
@@ -306,12 +309,12 @@
 */
 .fit-contain {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .fit-cover {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .w-25 {
@@ -400,31 +403,40 @@
   .d-w-24 {
     width: 24%;
   }
+
   .d-w-50 {
     width: 50%;
   }
+
   .d-w-45 {
     width: 45%;
   }
+
   .d-w-48 {
     width: 48%;
   }
+
   .d-w-100 {
     width: 100%;
   }
+
   .d-m-0 {
-    margin: 0px;
+    margin: 0;
   }
+
   .d-m-t-15 {
     margin-top: 15px;
   }
+
   .d-m-r-45 {
     margin-bottom: 30px;
   }
+
   .d-m-l-45 {
     margin-bottom: 30px;
     margin-left: 30px;
   }
+
   .p-x-about {
     padding-left: 20vw;
     padding-right: 20vw;
@@ -435,7 +447,7 @@
   background-blend-mode: luminosity;
 }
 
-.bg-filter:after {
+.bg-filter::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -444,7 +456,7 @@
   left: 0;
 }
 
-.border-bottom:after {
+.border-bottom::after {
   content: '';
   height: 1px;
   border-bottom-width: 1px;
@@ -455,13 +467,13 @@
 
 .img-white {
   -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
 
 .minimal {
   border: none;
   background: none;
-  background-color: none;
+  background-color: transparent;
   text-decoration: none;
 }
 
@@ -478,6 +490,7 @@ Past Dethfests
   .desktop {
     display: unset;
   }
+
   .mobile {
     display: none;
   }
@@ -572,7 +585,7 @@ h2 {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.75);
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .show-menu button {
@@ -594,18 +607,17 @@ h2 {
   ========================================
 */
 #headline {
-  background-image: url(../images/backgrounds/headline.jpg);
+  background-image: url(../images/backgrounds/headline.webp);
   background-position: center;
 }
 
 #headline .background-text {
-  background-image: url(../images/backgrounds/headline-text.jpg);
+  background-image: url(../images/backgrounds/headline-text.webp);
   background-position: right 39% bottom 25%;
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-filter: brightness(200%);
-          filter: brightness(200%);
+  filter: brightness(200%);
 }
 
 /*
@@ -614,7 +626,7 @@ h2 {
   ========================================
 */
 .divider {
-  background-image: url(../images/divider.jpg);
+  background-image: url(../images/divider.webp);
   height: 29px;
 }
 
@@ -633,7 +645,7 @@ Grey pattern background for Program and Partners
 ========================================
 */
 .bg-pattern {
-  background-image: url(../images/backgrounds/grey-pattern.jpg);
+  background-image: url(../images/backgrounds/grey-pattern.webp);
   background-size: cover;
   background-position: center;
 }
@@ -643,7 +655,7 @@ Grey pattern background for Program and Partners
 Section heading in Program and Featured Bands
 ========================================
 */
-.section-heading:after {
+.section-heading::after {
   border-bottom-color: #ec5242;
   width: 40px;
 }
@@ -653,7 +665,7 @@ Section heading in Program and Featured Bands
 Featured Bands
 ========================================
 */
-.band-country:after {
+.band-country::after {
   border-bottom-color: #d3d3d3;
   width: 20px;
 }
@@ -664,13 +676,13 @@ Footer
 ========================================
 */
 footer {
-  background-image: url(../images/backgrounds/footer.jpg);
+  background-image: url(../images/backgrounds/footer.webp);
   background-size: cover;
-  background-position: left 0px bottom 35%;
+  background-position: left 0 bottom 35%;
   z-index: 1;
 }
 
-footer:after {
+footer::after {
   background-color: black;
   opacity: 0.75;
   z-index: 2;
@@ -689,7 +701,7 @@ Past Dethfests
   z-index: 1;
 }
 
-.event:after {
+.event::after {
   background-color: #ec5242;
   opacity: 0.5;
   z-index: 2;
@@ -704,19 +716,24 @@ Past Dethfests
     padding-left: 10vw;
     padding-right: 10vw;
   }
+
   .p-y-default {
     padding-top: 45px;
     padding-bottom: 45px;
   }
+
   .m-l-menu {
     margin-left: 1vw;
   }
+
   .size-subheading {
     font-size: 40px;
   }
+
   .p-r-headline {
     padding-right: 40vw;
   }
+
   /*
   ========================================
   Desktop header
@@ -725,6 +742,7 @@ Past Dethfests
   .menu-logo {
     height: calc(60px - (15px * 2));
   }
+
   h1 {
     font-size: 60px;
   }
@@ -741,4 +759,3 @@ Past Dethfests
     margin-left: 2vw;
   }
 }
-/*# sourceMappingURL=style.css.map */
