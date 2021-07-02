@@ -7,7 +7,7 @@
 //Element should be relative
 //Z-index from bottom to top: element -> element::after -> element's children to display
 .bg-filter {
-  &:after {
+  &::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -20,7 +20,7 @@
 //Reusable class to set bottom border
 //Bottom border colour and width must be specified on element's after
 .border-bottom {
-  &:after {
+  &::after {
     content: '';
     height: 1px;
     border-bottom-width: 1px;
