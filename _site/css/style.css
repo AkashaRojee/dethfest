@@ -581,6 +581,10 @@ h2 {
   Mobile menu
   ========================================
 */
+.menu-logo {
+  height: calc(60px - (15px * 2));
+}
+
 .show-menu {
   display: unset;
   height: 100vh;
@@ -745,10 +749,6 @@ Past Dethfests
   Desktop header
   ========================================
   */
-  .menu-logo {
-    height: calc(60px - (15px * 2));
-  }
-
   h1 {
     font-size: 60px;
   }

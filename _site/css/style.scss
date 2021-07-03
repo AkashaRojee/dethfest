@@ -16,6 +16,7 @@ $p-y-menu: 15px;
 $m-l-menu: 1vw;
 $p-r-headline: 0;
 $size-subheading: 30px;
+$menu-height: 60px;
 
 //Horizontal menu padding
 @mixin p-y-menu($p-y-menu) {
@@ -132,6 +133,10 @@ h2 {
   Mobile menu
   ========================================
 */
+
+.menu-logo {
+  height: calc(#{$menu-height} - (#{$p-y-menu} * 2));
+}
 
 .show-menu {
   display: unset;
@@ -286,11 +291,6 @@ Past Dethfests
 }
 
 @media (min-width: 768px) {
-
-  // Set values for menu-height and p-y-menu
-  // to automatically style height of menu-logo
-  $menu-height: 60px;
-
   @include p-x-default($p-x-default: 10vw);
   @include p-y-default($p-y-default: 45px);
   @include m-l-menu($m-l-menu: 1vw);
@@ -302,10 +302,6 @@ Past Dethfests
   Desktop header
   ========================================
   */
-
-  .menu-logo {
-    height: calc(#{$menu-height} - (#{$p-y-menu} * 2));
-  }
 
   h1 {
     font-size: 60px;

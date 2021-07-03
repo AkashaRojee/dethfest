@@ -14,6 +14,8 @@ The project is based on an online website for a conference. The original design 
 
 I have personalised the template to build a website for a fictious Metal concert called Dethfest.
 
+[View short video presentation of the project](https://www.loom.com/share/e495c1f4cad846d8b3512d27eb620c33)
+
 **Main things done:**
 
 - Pages built: Home and About
