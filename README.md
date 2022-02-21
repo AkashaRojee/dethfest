@@ -8,24 +8,38 @@
 
 ![screenshot](images/dethfest-desktop.png)
 
-This project is a website built for the HTML/CSS + JS capstone project at Microverse.
+This project is a website built as my HTML/CSS + JS capstone project at Microverse. It showcases a fictitious Metal concert called Dethfest.
 
-The project is based on an online website for a conference. The original design idea is by Cindy Shin - _<a href="https://www.behance.net/adagio07" target="_blank">view the website template on Behance</a>_.
+It is built with HTML5, Sass, JS, and Jekyll.
 
-I have personalised the template to build a website for a fictious Metal concert called Dethfest.
+# Project Highlights: [view video presentation](https://www.loom.com/share/e495c1f4cad846d8b3512d27eb620c33)
 
-[View short video presentation of the project](https://www.loom.com/share/e495c1f4cad846d8b3512d27eb620c33)
+### - Modularises HTML into [partials](https://github.com/AkashaRojee/dethfest/tree/main/_includes) using Jekyll, and uses a base HTML layout to build the final page
 
-**Main things done:**
+https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d96b0a3/_layouts/default.html#L1-L32
 
-- Pages built: Home and About
-- HTML is broken down into partials using Jekyll
-- CSS is reusable through custom-built libraries
+### - Reusable SCSS via libraries I custom-built over multiple projects
+
+#### Custom functionalities
+
+https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d96b0a3/css/imports/_custom.scss#L5-L31
+
+https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d96b0a3/css/imports/_custom.scss#L52-L67
+
+#### Custom responsive Flex CSS library
+
+https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d96b0a3/css/imports/_flex.scss#L7-L57
+
+### - Experimented with Sass mixins to create reusable responsive styles
+
+https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d96b0a3/css/style.scss#L14-L73
+
+https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d96b0a3/css/style.scss#L293-L319
+
 - JS is modularised with custom-built functions
-- Flexbox is used for positioning
-- The website is responsive and includes mobile (up to 768 px) and desktop view
-- The mobile version includes a mobile menu operated using JS
 - Sections with repeating elements are populated dynamically using JS
+- The mobile version includes a mobile menu operated using JS
+- The website is responsive and includes mobile (up to 768 px) and desktop view
 
 ## Built With
 
@@ -93,6 +107,10 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+  
+## Acknowledgements
+  
+- [Cindy Shin](https://www.behance.net/adagio07)
 
 ## 📝 License
 
