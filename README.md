@@ -8,7 +8,7 @@
 
 ![screenshot](images/dethfest-desktop.png)
 
-This project is a website built as my HTML/CSS + JS capstone project at Microverse. It showcases a fictitious Metal concert called Dethfest.
+This project is a responsive mobile-first website built as my HTML/CSS + JS capstone project at Microverse. It showcases a fictitious Metal concert called Dethfest.
 
 It is built with HTML5, Sass, JS, and Jekyll.
 
@@ -30,16 +30,21 @@ https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d9
 
 https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d96b0a3/css/imports/_flex.scss#L7-L57
 
-### - Experimented with Sass mixins to create reusable responsive styles
+#### Experimented with Sass mixins to create reusable and dynamic responsive styles
 
 https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d96b0a3/css/style.scss#L14-L73
 
 https://github.com/AkashaRojee/dethfest/blob/a0e4ccef42faa275b555d812a46d3f396d96b0a3/css/style.scss#L293-L319
 
-- JS is modularised with custom-built functions
-- Sections with repeating elements are populated dynamically using JS
-- The mobile version includes a mobile menu operated using JS
-- The website is responsive and includes mobile (up to 768 px) and desktop view
+### - Repeating elements are dynamically populated using a structure I custom-built
+
+https://github.com/AkashaRojee/dethfest/blob/5ddd289753a2482d87cd656659ae527a1557ef19/js/dynamic-population.js#L67-L82
+
+https://github.com/AkashaRojee/dethfest/blob/5ddd289753a2482d87cd656659ae527a1557ef19/js/dynamic-population.js#L86-L99
+
+### - Created my own library functions
+
+https://github.com/AkashaRojee/dethfest/blob/5ddd289753a2482d87cd656659ae527a1557ef19/js/library.js#L3-L19
 
 ## Built With
 
